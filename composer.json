@@ -22,7 +22,9 @@
     "guzzlehttp/guzzle": "~6.0|~7.0",
     "ext-json": "*",
     "symfony/psr-http-message-bridge": "^2.0",
-    "ext-openssl": "*"
+    "ext-openssl": "*",
+    "firebase/php-jwt": "^5.2",
+    "codercat/jwk-to-pem": "^0.0.3"
   },
   "require-dev": {
     "mockery/mockery": "~1.2",

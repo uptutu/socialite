@@ -217,7 +217,7 @@ abstract class Base implements ProviderInterface
      *
      * @return string
      */
-    protected function formatScopes(array $scopes, $scopeSeparator): string
+    protected function formatScopes(array $scopes, string $scopeSeparator): string
     {
         return implode($scopeSeparator, $scopes);
     }

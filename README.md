@@ -195,6 +195,59 @@ If you want to use `alipay` create, you need set config like below.
 ```
 Only RSA2 personal private keys are supported, so stay tuned if you want to log in with a certificate.
 
+##### [Apple](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_rest_api)
+User information will be returned when obtaining `code`, and the return of code is called back through Apple service, so users need to handle it by themselves in the interface of redirectUrl, providing an interface to obtain `token` through `code`.
+
+How can I get configuration information by going through the details below.
+
+[What The Heck Is Sign-in With Apple](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
+
+[Sign in with Apple NODE，web端接入苹果第三方登录](https://segmentfault.com/a/1190000020786994)
+```php
+// config info
+$config = [
+    'apple' => [
+        // or 'app_id'
+        'client_id' => 'your app id',
+    
+        'key_id' => 'your key id',
+
+        'team_id' => 'team_id',
+
+        'private_key' => 'config your private key content',
+    
+        // or 'redirect_url'
+        'redirect' => 'redirect URL'
+    ],
+];
+
+$socialite = new SocialiteManager($config);
+
+// create apple driver
+$driver = $socialite->create('apple');
+
+// redirect to Auth Url
+$driver->redirect();
+
+// obtain token through code
+// Note: The user information is retrieved when the code returns. 
+// And this is the only opportunity to get user information
+$token = $driver->tokenFromCode('code');
+
+var_dump($token);
+[
+    'access_token' => 'xxxxxx',
+    'refresh_token' => 'xxxxx',
+    'expires_in' => 0000,
+    'id_token' => 'xxxxxx', // A JSON Web Token that contains the user’s identity information.
+    'token_type' => 'bearer'
+];
+
+// use id_token to get a unique user id
+$user_id = $driver->parseIdToken('id_token'); // string returns
+
+```
+
 ##### [DingTalk](https://ding-doc.dingtalk.com/doc#/serverapi3/mrugr3)
 
 Follow the documentation and configure it in the development panel.
@@ -431,6 +484,7 @@ Enjoy it! :heart:
 
 # Reference
 
+- [Apple - Incorporating Sign in with Apple into Other Platforms](https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/incorporating_sign_in_with_apple_into_other_platforms)
 - [Alipay - 用户信息授权](https://opendocs.alipay.com/open/289/105656)
 - [DingTalk - 扫码登录第三方网站](https://ding-doc.dingtalk.com/doc#/serverapi3/mrugr3)
 - [Google - OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect)

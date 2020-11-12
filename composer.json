@@ -24,7 +24,7 @@
     "symfony/psr-http-message-bridge": "^2.0",
     "ext-openssl": "*",
     "firebase/php-jwt": "^5.2",
-    "codercat/jwk-to-pem": "^0.0.3"
+    "codercat/jwk-to-pem": "^1.0"
   },
   "require-dev": {
     "mockery/mockery": "~1.2",

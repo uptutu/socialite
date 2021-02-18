@@ -10,11 +10,39 @@
 </p>
 
 
-<p align="center">Socialite is an OAuth2 Authentication tool. It is inspired by <a href="https://github.com/laravel/socialite">laravel/socialite</a>, You can easily use it in any PHP project.       <a href="https://github.com/overtrue/socialite/blob/master/README_CN.md">中文文档</aa></p>
+<p align="center">Socialite is an OAuth2 Authentication tool. It is inspired by <a href="https://github.com/laravel/socialite">laravel/socialite</a>, You can easily use it in any PHP project.       <a href="/README_CN.md">中文文档</aa></p>
 
 
-
-[TOC]
+- [Requirement](#requirement)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Configuration](#configuration)
+    - [Custom app name](#custom-app-name)
+    - [Extends custom provider](#extends-custom-provider)
+  - [Platform](#platform)
+    - [Alipay](#alipay)
+    - [DingTalk](#dingtalk)
+    - [Douyin](#douyin)
+    - [Baidu](#baidu)
+    - [Feishu](#feishu)
+    - [Taobao](#taobao)
+    - [WeChat](#wechat)
+  - [Some Skill](#some-skill)
+    - [Scopes](#scopes)
+    - [Redirect URL](#redirect-url)
+    - [State](#state)
+    - [Redirect with `state` parameter](#redirect-with-state-parameter)
+    - [Validate the callback `state`](#validate-the-callback-state)
+    - [Additional parameters](#additional-parameters)
+  - [User interface](#user-interface)
+    - [Standard user api:](#standard-user-api)
+    - [Get raw response from OAuth API](#get-raw-response-from-oauth-api)
+    - [Get the token response when you use userFromCode()](#get-the-token-response-when-you-use-userfromcode)
+    - [Get user with access token](#get-user-with-access-token)
+- [Enjoy it! :heart:](#enjoy-it-heart)
+- [Reference](#reference)
+- [PHP 扩展包开发](#php-扩展包开发)
+- [License](#license)
 
 # Requirement
 

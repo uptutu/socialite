@@ -15,7 +15,36 @@
 
 
 
-[TOC]
+- [版本要求](#版本要求)
+- [安装](#安装)
+- [使用指南](#使用指南)
+  - [配置](#配置)
+    - [自定义应用名](#自定义应用名)
+    - [扩展自定义服务提供程序](#扩展自定义服务提供程序)
+  - [平台](#平台)
+    - [支付宝](#支付宝)
+    - [钉钉](#钉钉)
+    - [抖音](#抖音)
+    - [百度](#百度)
+    - [飞书](#飞书)
+    - [淘宝](#淘宝)
+    - [微信](#微信)
+  - [其他一些技巧](#其他一些技巧)
+    - [Scopes](#scopes)
+    - [Redirect URL](#redirect-url)
+    - [State](#state)
+    - [带着 `state` 参数的重定向](#带着-state-参数的重定向)
+    - [检验回调的 `state`](#检验回调的-state)
+    - [其他的一些参数](#其他的一些参数)
+  - [User interface](#user-interface)
+    - [标准的 user api：](#标准的-user-api)
+    - [从 OAuth API 响应中取得原始数据](#从-oauth-api-响应中取得原始数据)
+    - [当你使用 userFromCode() 想要获取 token 响应的原始数据](#当你使用-userfromcode-想要获取-token-响应的原始数据)
+    - [通过 access token 获取用户信息](#通过-access-token-获取用户信息)
+- [Enjoy it! :heart:](#enjoy-it-heart)
+- [参照](#参照)
+- [PHP 扩展包开发](#php-扩展包开发)
+- [License](#license)
 
 # 版本要求
 
